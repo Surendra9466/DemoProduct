@@ -1,0 +1,351 @@
+.contact-container-gs {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.left-side {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 30px; /* Add padding to the left side content */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: sticky; /* Add sticky positioning */
+  left: 0; /* Stick to the left side */
+  width: 50%; /* Occupy 50% of the screen width to match the right side */
+}
+
+
+.right-side {
+  flex: 1;
+  /* Remove the previous position: relative; and height: 100vh; styles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Add these properties to ensure no gaps on the right side */
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+
+
+.video-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%; /* Set the width to cover only the right side */
+  height: 100%; /* Maintain full height */
+  object-fit: cover; /* Ensure the video covers the entire space */
+}
+
+
+
+
+/* Rest of your CSS styles for the form and other elements remain unchanged */
+
+
+.container {
+  min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack the elements vertically */
+  align-items: center; /* Center align the content horizontally */
+}
+
+.form-container-gs {
+  width: 100%; /* Span across the whole right side */
+  padding: 30px;
+  background-color: transparent;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border-radius: 10px;
+position: sticky;
+  top: 0; /* Keep the form at the top of the viewport */
+  z-index: 2; /* Ensure the form appears above other content */
+}
+
+/* Rest of your CSS for input fields, buttons, etc. can remain the same */
+
+.animated-sentence-g {
+  position: sticky;
+  bottom: 0; /* Keep it at the bottom of the viewport */
+  left: 0;
+  color: #fff;
+  font-size: 14px;
+  opacity: 0.7;
+  z-index: 2; /* Ensure it appears above other content */
+}
+
+.send-button {
+  background: deepskyblue; /* Change background color for better visibility */
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 20px; /* Add some spacing from other elements */
+}
+
+/* Rest of your CSS for input fields, buttons, etc. can remain the same */
+
+
+.form-container-gs h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.input-field-gs input,
+.input-field-gs select,
+.input-field-gs textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-bottom: 2px solid linear-gradient(to right, purple, deepskyblue);
+  transition: border-color 0.3s ease;
+}
+
+.input-field-gs input:focus,
+.input-field-gs select:focus,
+.input-field-gs textarea:focus {
+  border-bottom: 2px solid deepskyblue;
+}
+
+.input-field-gs textarea {
+  resize: none;
+  height: 100px;
+}
+
+.send-button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.send-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.animated-sentence-g {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 14px;
+  opacity: 0.7;
+  z-index: 10000000;
+}
+
+.options-container-gs {
+  margin-top: 20px;
+  background-color:transparent;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.options-label-gs {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #00aaff;
+}
+
+.options-boxes-gs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.option-box-gs {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.option-box-gs:hover {
+  background-color:#00aaff;
+}
+
+.selected-gs {
+  background-color: #007bff;
+}
+
+.information-container-gs {
+  position: absolute;
+  width: calc(100% - 60px); /* 100% width of the parent minus left and right padding */
+  top: 50%;
+  transform: translateY(-50%);
+}
+.info-box-gs {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px; /* Reduced vertical padding, kept horizontal the same */
+  max-height: 700px;  /* Set a maximum height */
+  overflow-y: auto;   /* Add scrolling if content overflows */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Take up the full width of the information-container-gs */
+  /* Add these properties to ensure the box stays within the left container */
+  position: absolute;
+  left: -15%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.description-container-gs {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Define some variables for reuse */
+:root {
+  --primary-text-color: #eee;
+  --secondary-bg-color: #551d94;
+}
+
+/* Base styles for all descriptions */
+.description-gs {
+  background-color: var(--secondary-bg-color); /* Slightly lighter than full black for contrast */
+  color: var(--primary-text-color); /* Light grayish color for modern tech look */
+  border-radius: 4px; /* Smaller rounded edges for minimalism */
+  margin-bottom: 10px;
+  font-size: 14px; /* Maintain the font size */
+  text-align: left; /* Left align the text */
+  line-height: 1.5; /* Good line height for readability */
+  transition: all 0.3s ease-in-out; /* Faster transition */
+  padding: 16px 16px;  /* Reduced vertical padding to 8px, keeping horizontal padding as 16px */
+  width: 100%; /* Stretch the description to take up 100% of the width of its parent */
+
+}
+
+/* Hover Effect for descriptions */
+.description-gs:hover {
+  background-color: #444; /* Slightly lighter on hover */
+  transform: translateY(-3px); /* Move upwards a bit */
+}
+
+/* Animations for entry */
+.animate-gs {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards 0.2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.description.animate-gs {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info-button-gs {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  color: deepskyblue;
+  border: 1px solid deepskyblue;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  position: relative;
+}
+
+.info-button-gs:hover {
+  background-color: deepskyblue;
+  color: white;
+  border-color: white;
+}
+
+.info-button-gs::after {
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  bottom: 30px;
+  width: max-content;
+  white-space: nowrap;
+}
+
+description1-gs
+{
+  font-family: 'Arial', sans-serif; /* You could also use something like 'Futura', 'Arial Black', etc. */
+  font-size: 24px; /* Larger font size for more emphasis */
+  text-transform: uppercase; /* All caps for a bit of formality */
+  letter-spacing: 1.5px; /* Adding a bit of space between characters */
+  color: #00FF00; /* A 'techy' green */
+  background-color: rgba(0, 0, 0, 0.8); /* A darker background to make the text pop */
+  border: 2px solid #00FF00; /* A border that matches the text color */
+  padding: 10px; /* Some padding so the text isn't too close to the border */
+  margin: 10px 0; /* A little margin to separate it from other elements */
+  box-shadow: 0px 0px 10px 2px #00FF00; /* A subtle box shadow for depth */
+  text-shadow: 2px 2px 4px #000000; /* Text shadow for more depth */
+  transition: all 0.3s ease-in-out;
+}
+
+.info-button-gs:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+.description.animate-gs {
+  opacity: 1;
+  animation: typeEffect 2s steps(40, end);
+}
+
+@keyframes typeEffect {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

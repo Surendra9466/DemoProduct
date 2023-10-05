@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.section {
+  padding: 50px;
+  color: #333;
+  min-height: 100vh; /* Set a minimum height for each section to fill the viewport height */
+}
+
+/* Add any other styles as needed */

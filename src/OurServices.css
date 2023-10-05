@@ -1,0 +1,290 @@
+.services-container {
+  width: 100vw; /* takes full viewport width */
+  height: 100vh; /* takes full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  z-index: 9;
+  font-family: "Roboto", sans-serif;
+}
+
+.service {
+  font-size: 24px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.sub-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  z-index: 11; /* Add this line to ensure the subsections are always on top */
+}
+
+.sub-section h1 {
+  margin-bottom: 1rem;
+}
+
+.description {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  max-width: 70%;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.sub-section:hover .description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sub-section.left {
+  left: 0;
+  border-right: solid #000;
+}
+
+.sub-section.right {
+  right: 0;
+  border-left: solid #000;
+}
+
+.sub-section.right:hover {
+  background: linear-gradient(to right, #0000ff, #000080);
+
+  color: #fff;
+}
+
+.sub-section.left:hover {
+  background: linear-gradient(to right, #4b0082, #800080);
+  color: #fff;
+}
+
+.sub-section:hover h1,
+.sub-section:hover .description {
+  color: #fff;
+}
+
+.sub-section:hover .description {
+  opacity: 1;
+}
+
+#consultingServices {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border: 3px solid white;
+  background: transparent;
+  transition:
+    all 0.5s ease,
+    border-radius 0.5s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+}
+
+.title-box h1 {
+  transition: transform 0.5s ease;
+}
+
+/* Apply these styles when the title box is directly hovered */
+.sub-section .title-box.direct-hover:hover {
+  color: #fff;
+}
+
+/* Apply these styles when a sub-section is hovered */
+.sub-section:hover .title-box {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  border-color: #000;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.sub-section.left .title-box,
+.sub-section.right .title-box {
+  border-color: white;
+}
+
+.sub-section:hover .title-box:hover {
+  background: linear-gradient(to left, #9c0c5a, #2c2495);
+  color: #fff;
+}
+
+.sub-section:hover .title-box {
+  border-radius: 50%; /* Transforming into a circle when hovered */
+  border-color: #000; /* Black border for contrast when the background changes */
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); /* Enhanced white shadow for hover 3D effect */
+}
+
+.sub-section.left .title-box,
+.sub-section.right .title-box {
+  border-color: white; /* Ensure white border for contrast against dark background */
+}
+
+/* Adjusted h1 to be in the middle of the shape when not hovered */
+.sub-section h1 {
+  transition: all 0.5s ease;
+  margin: 0; /* Remove margin to place it at the center */
+  justify-content: center; /* Centers content vertically */
+  align-items: center;
+}
+
+.sub-section:hover h1 {
+  margin-top: -40px; /* Push upwards when hovered to make space for the description */
+}
+
+.description {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  max-width: 70%;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.sub-section:hover .description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mouse Field styles */
+.mouse-field-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mouse-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mouse {
+  width: 30px;
+  height: 60px;
+  border: 2px solid #f1f1f1;
+  border-radius: 30px;
+  position: relative;
+  bottom: 30px;
+}
+
+.mouse::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #9200a8;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+}
+.learn-more-button {
+  background-color: transparent;
+  border: none;
+  color: #00baff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border 0.3s ease;
+  border: 2px solid #00baff;
+  border-radius: 6px;
+}
+
+.learn-more-button:hover {
+  background-color: #00baff;
+  color: white;
+  border: 2px solid transparent;
+}
+.sub-section:hover .title-box {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  border-color: #000;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    /* Adjust the opacity to control the starting color */ rgba(0, 0, 0, 0.2)
+      100% /* Adjust the opacity to control the ending color */
+  );
+}
+
+.sub-section.left .title-box,
+.sub-section.right .title-box {
+  border-color: white;
+}
+
+.sub-section:hover .title-box:hover h1,
+.sub-section:hover .title-box:hover .description {
+  color: #fff;
+}
+
+.sub-section .title-box.direct-hover:hover {
+  background-color: #000;
+  color: #fff;
+}
+.scroll-down-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff; /* White text */
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 550;
+  text-align: center;
+  z-index: 2; /* Higher z-index to appear above the mouse */
+}

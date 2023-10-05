@@ -1,0 +1,151 @@
+/* Global Styles */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents scrolling */
+}
+
+/* Intro Container */
+.intro {
+  position: relative; /* Changed from absolute to relative */
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+}
+
+/* Video Background */
+#myVideo {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* Content Container */
+/* CSS */
+/* IntroContent.css */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+.intro-content-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* To bring the container to the front */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sentence {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  z-index: 1001; /* Place above the container */
+  color: white;
+  opacity: 0;
+  font-family: "Montserrat", sans-serif; /* Use Montserrat font */
+  font-size: 1.5em; /* Increased the font size */
+  font-weight: 100; /* Make the text bold */
+  text-align: center; /* Center the text */
+}
+
+.sentence.visible {
+  opacity: 1;
+}
+
+.sentence.new-paragraph {
+  margin-top: 2rem;
+}
+
+/* Existing styles remain the same */
+
+/* Add or modify these classes */
+.specialized-area-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.specialized-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1em;
+}
+
+.specialized-area img {
+  width: 50px; /* or your desired size */
+  height: auto;
+  align-items: center;
+}
+
+.specialized-area span {
+  font-size: 0.8em;
+  text-align: center;
+  margin-top: 0.5em;
+  align-items: center;
+}
+
+/* Mouse Field */
+.mouse-field-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mouse {
+  width: 30px;
+  height: 60px;
+  border: 2px solid #f1f1f1;
+  border-radius: 30px;
+  position: relative;
+}
+
+.mouse::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+}
+
+.scroll-down-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff; /* White text */
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 550;
+  text-align: center;
+  z-index: 2; /* Higher z-index to appear above the mouse */
+}
+
+/* Animation */
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 40px;
+  }
+}

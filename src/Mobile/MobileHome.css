@@ -1,0 +1,173 @@
+/* Reset some default styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+/* General container styles */
+.container-m {
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+/* Sections */
+.section-m {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* Set background color to black */
+  z-index: 998; /* Adjust z-index to be behind the nav bar */
+  background-color: transparent;
+}
+
+.intro-m {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  background-color: transparent;
+}
+
+.get-started-m {
+  width: 100vw;
+  position: absolute;
+  background-color: #000;
+  min-height: 100vh;
+}
+
+/* Logo */
+.logo-container-m {
+  position: fixed;
+  top: 10px; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the left position as needed */
+  width: auto;
+  z-index: 999;
+}
+
+.logo-m {
+  width: 100%; /* Make the logo responsive */
+  max-width: 120px; /* Adjust the maximum width as needed */
+}
+
+/* Navbar */
+.nav-container-m {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Create space between logo and menu */
+  align-items: center;
+  height: 80px;
+  z-index: 999;
+}
+
+/* Navbar */
+.nav-container-m {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center; /* Vertically center-align items */
+  height: 80px;
+  z-index: 999;
+}
+
+/* Navbar items */
+.nav-item-m {
+  margin: 0 5px; /* Reduced margin for closer spacing */
+  cursor: pointer;
+  color: white;
+  position: relative;
+  transition: color 0.3s ease; /* Smooth transition animation for text color */
+  background-color: transparent;
+}
+
+/* Styles for non-active sections when hovered */
+.nav-item-m:hover {
+  color: #5bc0de;
+}
+
+/* Styles for the active section */
+.nav-item-m.active {
+  color: #8a4fff;
+  position: relative;
+  background-color: transparent;
+}
+
+/* Create an animated underline for both active and non-active sections */
+.nav-item-m.active::before,
+.nav-item-m:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(
+    45deg,
+    #8a4fff,
+    #8a4fff,
+    #5bc0de,
+    #5bc0de,
+    #8a4fff,
+    #8a4fff
+  );
+  background-size: 300% 300%;
+  animation: gradientAnimation 3s linear infinite;
+}
+
+/* Keyframes animation for the gradient pattern */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300% 300%;
+  }
+}
+
+/* Scrollbar styles */
+.scrollbar-container {
+  position: absolute;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.scrollbar-background {
+  position: absolute;
+  height: 4px;
+  background-color: white;
+  opacity: 0.3;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.scrollbar {
+  position: absolute;
+  height: 4px;
+  background-color: white;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  z-index: 2;
+}

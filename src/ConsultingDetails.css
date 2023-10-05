@@ -1,0 +1,158 @@
+/* ConsultingDetails.css */
+.consulting-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 75%;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(30, 30, 60, 1), rgba(0, 0, 0, 1));
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-content {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+  width: 100%;
+}
+
+.service-title {
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.service-description {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.carousel-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.carousel-button:hover {
+  color: #6eb6ff;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.carousel-button-left,
+.carousel-button-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+}
+
+.carousel-button-left {
+  margin-right: 10px;
+}
+
+.carousel-button-right {
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .consulting-details {
+    width: 95%;
+  }
+
+  .service-title {
+    font-size: 24px;
+  }
+
+  .service-description {
+    font-size: 16px;
+  }
+}
+
+.service-title,
+.service-description,
+.carousel-button,
+.close-button {
+  text-shadow: 0 0 5px rgba(110, 182, 255, 0.5);
+}
+
+.progress-bar-container {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(110, 182, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-bar-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    #6eb6ff 0%,
+    rgba(110, 182, 255, 0.5) 100%
+  );
+  transform-origin: bottom;
+}
+
+.get-started-button {
+  background-color: #6eb6ff;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.get-started-button:hover {
+  background-color: #4a9ed3;
+  transform: scale(1.05);
+}
